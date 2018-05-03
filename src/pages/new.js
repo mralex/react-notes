@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import "./form.css";
 
-class NewNotePage extends React.Component {
+class NewNotePage extends React.PureComponent {
     constructor(props) {
         super(props);
 

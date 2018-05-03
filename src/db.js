@@ -29,4 +29,8 @@ export default class DB {
         const res = await this.db.put({ ...note });
         return res;
     }
+
+    async deleteNote(note) {
+        await this.db.remove(note);
+    }
 }

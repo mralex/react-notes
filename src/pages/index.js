@@ -1,7 +1,7 @@
 import React from 'react';
 import NotesList from '../components/notes-list';
 
-class IndexPage extends React.Component {
+class IndexPage extends React.PureComponent {
     constructor(props) {
         super(props);
 

@@ -7,7 +7,7 @@ export default () => (
     <nav className="navbar">
         <Link to="/"><h1>ReactNotes</h1></Link>
         <span className="navbar-buttons">
-            <Link to="/new">New Note</Link>
+            <Link className="btn" to="/new">New Note</Link>
         </span>
     </nav>
 )

@@ -17,6 +17,23 @@ a {
     color: #33f;
     text-decoration: none;
 }
+
 a:hover {
     text-decoration: underline;
+}
+
+.btn {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-left: 5px;
+    background: #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    border: none;
+}
+
+.btn:hover {
+    background: #eaeaea;
+    cursor: pointer;
 }

@@ -16,16 +16,6 @@
     margin-right: 20px;
 }
 
-.navbar-buttons a {
-    display: inline-block;
+.navbar-buttons .btn {
     padding: 10px 15px;
-    margin-left: 5px;
-    background: #ddd;
-    border-radius: 5px;
-    text-decoration: none;
-    color: #333;
-}
-
-.navbar-buttons a:hover {
-    background: #eaeaea;
 }
