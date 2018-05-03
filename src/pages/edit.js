@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { DBComponent } from '../context';
-
 import "./form.css";
 
 class EditNotePage extends React.Component {
@@ -16,24 +14,18 @@ class EditNotePage extends React.Component {
                 createdAt: null,
                 updatedAt: null
             },
-            loading: true,
             saving: false
         }
     }
 
     async componentDidMount() {
-        let note = await this.props.db.get(this.props.match.params.id);
-        this.setState({ note, loading: false });
+        this.setState({ note: {...this.props.note} });
     }
 
     async handleSave() {
         this.setState({ saving: true });
 
-        const { note } = this.state;
-
-        note.updatedAt = new Date();
-
-        const res = await this.props.db.put({ ...note });
+        const res = await this.props.onSave({ ...this.state.note });
 
         this.props.history.replace(`/notes/${res.id}`)
     }
@@ -59,7 +51,7 @@ class EditNotePage extends React.Component {
                         <label>Title</label>
                         <input type="text" name="title" value={note.title} onChange={(e) => this.updateValue(e)} />
                     </div>
-                    <div className="note-form-field">
+                    <div className="note-form-field note-form-field-text">
                         <textarea name="body" value={note.body} onChange={(e) => this.updateValue(e)} />
                     </div>
                     <div className="note-form-buttons">
@@ -72,4 +64,4 @@ class EditNotePage extends React.Component {
     }
 }
 
-export default DBComponent(EditNotePage);
+export default EditNotePage;

@@ -3,33 +3,16 @@ import { Link } from 'react-router-dom';
 import marked from 'marked';
 import dayjs from 'dayjs';
 
-import { DBComponent } from '../context';
-
 import "./show.css";
 
 class ShowPage extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = { note: {}, loading: true }
-    }
-
-    async componentDidMount() {
-        let note = await this.props.db.get(this.props.match.params.id);
-        this.setState({ note, loading: false });
-    }
-
     renderDate() {
-        let d = dayjs(this.state.note.updatedAt)
+        let d = dayjs(this.props.note.updatedAt)
         return d.format("MMMM D YYYY, HH:mm")
     }
 
     render() {
-        if (this.state.loading) {
-            return <h1>Loading...</h1>
-        }
-
-        const { note } = this.state;
+        const { note } = this.props;
 
         return (
             <div>
@@ -44,4 +27,4 @@ class ShowPage extends React.Component {
     }
 }
 
-export default DBComponent(ShowPage);
+export default ShowPage;
