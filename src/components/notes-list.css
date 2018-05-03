@@ -1,0 +1,42 @@
+.notes-list {
+    margin-bottom: 100px;
+}
+
+.notes-list-item {
+    display: flex;
+    align-items: center;
+
+    padding: 20px;
+    border-bottom: 1px solid #dadada;
+}
+
+.notes-list-item a {
+    display: inline-block;
+    width: 100%;
+    color: #33f;
+    text-decoration: none;
+}
+.notes-list-item a:hover {
+    text-decoration: underline;
+}
+.notes-list-item h2 {
+    padding: 0;
+    margin: 0;
+}
+
+.notes-list-date {
+    text-align: right;
+    flex-grow: 1;
+    color: #cfcfcf;
+    font-size: 0.9em;
+}
+
+@media screen and (max-width: 750px) {
+  .notes-list-item {
+    display: block;
+  }
+  .notes-list-item h2 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,31 @@
+.navbar {
+    background: #f3f3f3;
+
+    display: flex;
+    align-items: center;
+}
+
+.navbar h1 {
+    margin: 0;
+    padding: 20px;
+}
+
+.navbar-buttons {
+    text-align: right;
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+.navbar-buttons a {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-left: 5px;
+    background: #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+}
+
+.navbar-buttons a:hover {
+    background: #eaeaea;
+}
